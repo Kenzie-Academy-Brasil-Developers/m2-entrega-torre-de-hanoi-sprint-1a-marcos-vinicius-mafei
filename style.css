@@ -131,6 +131,44 @@ header span {
     height: 40px;
     width: 320px;
 }
+.hidden{
+    display: none;
+}
+.modalVitoria{
+    background-color: rgba(23, 102, 134, 0.856);
+    width: 100%;
+    position: absolute;
+    height: 200px;    
+    top: 30px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modalVitoria h1{
+    position: absolute;
+    z-index: 3;
+    color: white;
+}
+
+.modalRegras{
+    background-color: rgba(255, 0, 0, 0.452);
+    width: 100%;
+    position: absolute;
+    height: 200px;    
+    top: 30px;
+    z-index: 3;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+}
+.modalRegras h3{
+    position: absolute;
+    z-index: 3;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+}
 
 /* GAME DECOR */
 

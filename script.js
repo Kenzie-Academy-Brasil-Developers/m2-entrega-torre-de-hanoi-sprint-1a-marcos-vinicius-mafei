@@ -22,6 +22,9 @@ function createGame(diskNumber = 3) {
 
 createGame()
 
+let modalVitoria = document.getElementById('modalVitoria')
+let modalRegras = document.getElementById('modalRegras')
+
 // cria funcionalidades do jogo // 
 
 const tower1 = document.getElementsByClassName("game--towers")[0]
@@ -42,6 +45,9 @@ function getDisk(event) {
     tower3.addEventListener("click", moveDisk)
 }
 
+let count = 0
+let movimentsCount = document.getElementsByClassName("game--grass")[0]
+
 function moveDisk(event) {
     tower1.removeEventListener("click", moveDisk)
     tower2.removeEventListener("click", moveDisk)
@@ -51,5 +57,19 @@ function moveDisk(event) {
     tower3.addEventListener("click", getDisk)
     if(event.currentTarget.childNodes.length === 0 || currentDisk.offsetWidth < event.currentTarget.lastChild.offsetWidth){
     event.currentTarget.appendChild(currentDisk)
+    }else if(currentDisk.offsetWidth > event.currentTarget.lastChild.offsetWidth){
+        modalRegras.classList.add("modalRegras")
+        let messageRegras = document.createElement("h3")
+        messageRegras.innerText = "Você não pode por um disco maior sobre um disco menor, por favor faça outra seleção  "
+        modalRegras.appendChild(messageRegras)
     }
+    if(tower3.childNodes.length === 3){
+        modalVitoria.classList.add("modalVitoria")
+        let messageVictory = document.createElement("h1")
+        messageVictory.innerText = "You Win !!!"
+        modalVitoria.appendChild(messageVictory)
+    }
+    count++
+    movimentsCount.innerText =`Total de movimentos: ${count}`
 }
+
