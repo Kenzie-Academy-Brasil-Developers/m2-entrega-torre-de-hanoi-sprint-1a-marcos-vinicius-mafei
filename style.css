@@ -1,0 +1,74 @@
+/* VARIÁVEIS */
+:root {
+    --gameColor: #FFD16D;
+    --green--grass: #005A00;
+}
+
+/* VARIÁVEIS */
+
+/* GERAL */
+body {
+    font-family: "Luckiest Guy";
+}
+
+/* GERAL */
+
+/* GAME SPACE */
+
+
+.game{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 300px;
+}
+
+.game--towers {
+    background-color: aqua;
+    height: 120px;
+    width: 15px;
+    border-top-left-radius:20px;
+    border-top-right-radius:20px;
+    position: relative;
+    display:flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.disks{
+    height: 25px;
+    border-radius: 8px;
+    z-index: 2;
+}
+.disk1{
+    background-color: #3d7012;
+    width:30px;
+}
+.disk2{
+    background-color: #9900ff;
+    width:50px;
+}
+.disk3{
+    background-color: #ff8800;
+    width:70px;
+}
+.disk4{
+    background-color: #e62c2c;
+    width:90px;
+}
+.disk5{
+    background-color: #2c76e6;
+    width:110px;
+}
+
+/* GAME SPACE */
+
+/* GAME DECOR */
+
+
+/* GAME DECOR */
+
+
+/* MEDIA QUERIES */
+
+
+/* MEDIA QUERIES */
