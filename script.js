@@ -37,19 +37,19 @@ function getDisk(event) {
     tower1.removeEventListener("click", getDisk)
     tower2.removeEventListener("click", getDisk)
     tower3.removeEventListener("click", getDisk)
-    
     tower1.addEventListener("click", moveDisk)
     tower2.addEventListener("click", moveDisk)
     tower3.addEventListener("click", moveDisk)
 }
 
-function moveDisk(event) {    
+function moveDisk(event) {
     tower1.removeEventListener("click", moveDisk)
     tower2.removeEventListener("click", moveDisk)
     tower3.removeEventListener("click", moveDisk)
-    
     tower1.addEventListener("click", getDisk)
     tower2.addEventListener("click", getDisk)
     tower3.addEventListener("click", getDisk)
+    if(event.currentTarget.childNodes.length === 0 || currentDisk.offsetWidth < event.currentTarget.lastChild.offsetWidth){
     event.currentTarget.appendChild(currentDisk)
+    }
 }

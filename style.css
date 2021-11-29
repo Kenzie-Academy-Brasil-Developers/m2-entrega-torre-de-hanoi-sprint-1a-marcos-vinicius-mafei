@@ -11,12 +11,18 @@ body {
     font-family: "Luckiest Guy";
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* GERAL */
 
 /* GAME SPACE */
 
 
-.game{
+.game {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -24,46 +30,68 @@ body {
 }
 
 .game--towers {
-    background-color: aqua;
+    background-color: var(--gameColor);
     height: 120px;
     width: 15px;
-    border-top-left-radius:20px;
-    border-top-right-radius:20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     position: relative;
-    display:flex;
+    display: flex;
     flex-direction: column-reverse;
     align-items: center;
 }
-.disks{
+
+.disks {
     height: 25px;
     border-radius: 8px;
     z-index: 2;
 }
-.disk1{
+
+.disk1 {
     background-color: #3d7012;
-    width:30px;
+    width: 30px;
 }
-.disk2{
+
+.disk2 {
     background-color: #9900ff;
-    width:50px;
+    width: 50px;
 }
-.disk3{
+
+.disk3 {
     background-color: #ff8800;
-    width:70px;
+    width: 70px;
 }
-.disk4{
+
+.disk4 {
     background-color: #e62c2c;
-    width:90px;
+    width: 90px;
 }
-.disk5{
+
+.disk5 {
     background-color: #2c76e6;
-    width:110px;
+    width: 110px;
 }
 
 /* GAME SPACE */
 
 /* GAME DECOR */
 
+.game--bottom {
+    background-color: var(--gameColor);
+    height: 20px;
+    border-radius: 8px;
+    width: 300px;
+}
+
+.game--grass {
+    background-color: var(--green--grass);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 400px;
+}
 
 /* GAME DECOR */
 
