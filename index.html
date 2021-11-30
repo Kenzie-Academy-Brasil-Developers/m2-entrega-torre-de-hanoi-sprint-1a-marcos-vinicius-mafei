@@ -18,21 +18,28 @@
             <span>Made by Marcos Mafei e Lucas Tatagiba</span>
         </div>
     </header>
-    <main>
+    <section class="popups">
+        <div class="selectDificult">
+            <h3>Selecione uma dificuldade:</h3>
+            <div>
+                <button class="dificcult">Easy</button>
+                <button class="dificcult">Normal</button>
+                <button class="dificcult">Hard</button>
+            </div>
+        </div>
         <div id = "modalVitoria" class="modalVitoria displayNone">
             <h1>You win!!!</h1>
-            <button>Play again</button>
+            <button>Restart</button>
+            <img src="images/happyMario.gif" alt="happy Mario">
         </div>
 
         <div id = "modalRegras" class="modalRegras displayNone">
             <h3>Você não pode por um disco maior sobre um disco menor, por favor faça outra seleção</h3>
+            <img src="images/sadMario.gif" alt="sad Mario">
         </div>
+    </section>
+    <main>
 
-        <div class="game">
-        
-        </div>
-        <div class = "game--bottom"></div>
-        <div class ="game--grass">total movements: 0</div>
     </main>
     <script src="script.js"></script>
 </body>

@@ -21,8 +21,22 @@ main {
     align-items: center;
 }
 
-.displayNone{
+.displayNone {
     display: none !important;
+}
+
+button{
+    background-image: url("./images/mario-cloud.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: transparent;
+    background-color: transparent;
+    width: 80px;
+    height:40px;
+}
+button:hover{
+    cursor: pointer;
 }
 
 /* GERAL */
@@ -39,12 +53,13 @@ header {
 }
 
 header h1 {
-    font-size:22px;
-    margin-top: 3px;
+    font-size: 22px;
+    margin-top: 10px;
     color: #fff;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
+
 header span {
     font-size: 12px;
     color: var(--green--grass);
@@ -64,6 +79,30 @@ header span {
 
 /* HEADER */
 
+/* DIFICULT SELECTION */
+
+.selectDificult {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 22px;
+    align-items: center;
+    height: 200px;
+    width: 320px;
+    -webkit-text-stroke-width: 0.8px;
+    -webkit-text-stroke-color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+.selectDificult div{
+    display: flex;
+    gap: 20px;
+    
+}
+
+/* DIFICULT SELECTION */
+
 /* GAME SPACE */
 
 
@@ -78,20 +117,19 @@ header span {
     background-color: #2C8D33;
     height: 120px;
     width: 15px;
-    /* border-top-left-radius: 20px;
-    border-top-right-radius: 20px; */
     position: relative;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
 }
-.game--towers::after{
+
+.game--towers::after {
     position: absolute;
     top: 0;
     text-align: center;
     content: "";
-    height:12px;
-    width:20px;
+    height: 12px;
+    width: 20px;
     background-color: #2C8D33;
     border-radius: 2px;
     border: 1px solid #0e0d0d2c;
@@ -136,7 +174,7 @@ header span {
     background-color: var(--green--grass);
     height: 20px;
     border-radius: 8px;
-    width: 300px;
+    width: 320px;
 }
 
 .game--grass {
@@ -152,55 +190,139 @@ header span {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
-.hidden{
-    display: none;
-}
-.modalVitoria{
-    background-color: rgba(23, 102, 134, 0.856);
-    font-size: 22px;
-    width: 100%;
-    position: absolute;
-    height: 200px;    
-    top: 100px;
-    z-index: 3;
+
+.game--ground {
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
+    gap: 40px;
+    padding-top: 30px;
+    width: 100%;
+    height: 80%;
+    background-image: url("./images/marioGround.jpg");
+    background-size: cover;
+    border-top: 2px solid var(--gameColor);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px
 }
-.modalVitoria h1{
-    position: absolute;
-    z-index: 3;
-    color: white;
-    top: 50px;
-}
-.modalVitoria button{
-    background-color: #2adddd;
-    color: #005A00;
+.reset--button,.changeDifficult--button{
+   width: 100px;
+   height:60px;
+   font-family: "Luckiest Guy";
+   font-size: 12px;
 }
 
-.modalRegras{
-    background-color: rgba(255, 0, 0, 0.452);
-    width: 100%;
+.hidden {
+    display: none;
+}
+
+.modalVitoria {
+    background-image: url("./images/happyMario.gif");
+    background-size: contain;
+    background-color:#5394FC;
+    border: 2px solid rgba(0, 0, 0, 0.603);
+    font-size: 22px;
+    width: 320px;
     position: absolute;
-    height: 200px;    
-    top: 100px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    height: 200px;
+    top: 30%;
+    font-size: 26px;
+    padding-top: 20px;
+    color: #fff;
     z-index: 3;
     display: flex;
-    justify-content: center;    
+    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
-.modalRegras h3{
+.modalVitoria img{
+    max-width: 50px;
+    max-height: 60px;
+}
+
+
+.modalRegras {
+    background-color: #ff000086;
+    width: 320px;
     position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    height: 200px;
+    top: 30%;
     z-index: 3;
-    color: white;
-    text-align: center;
-    line-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
+
 
 /* GAME DECOR */
 
 
 /* MEDIA QUERIES */
+@media screen and (min-width: 420px) {
+    header {
+        background-size: contain;
+    }
+    .game--ground{
+        width: 80%;
+    }
+}
 
+@media screen and (min-width:950px) {
+    body {
+        background-size: contain;
+    }
+
+    .container {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 600px;
+    }
+
+    header span {
+        font-size: 20px;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+    }
+    .game{
+        width: 600px;
+    }
+    .game--towers{
+        width: 30px;
+    }
+    .game--towers::after {
+        width: 40px;
+    }
+    .game--bottom{
+        width:700px;
+    }
+    .game--grass{
+        width: 750px;
+        font-size: 22px;
+        padding-top:10px;
+    }
+    .disk1{
+        width: 60px;
+    }
+    .disk2{
+        width: 100px;
+    }
+    .disk3{
+        width: 140px
+    }
+    .disk4{
+        width: 180px;
+    }
+    .disk5{
+        width: 220px;
+    }
+}
 
 /* MEDIA QUERIES */
