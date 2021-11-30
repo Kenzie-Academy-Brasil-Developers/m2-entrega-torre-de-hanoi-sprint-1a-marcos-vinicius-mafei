@@ -25,7 +25,7 @@ main {
     display: none !important;
 }
 
-button{
+button {
     background-image: url("./images/mario-cloud.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -33,9 +33,10 @@ button{
     border: transparent;
     background-color: transparent;
     width: 80px;
-    height:40px;
+    height: 40px;
 }
-button:hover{
+
+button:hover {
     cursor: pointer;
 }
 
@@ -95,10 +96,11 @@ header span {
     margin-left: auto;
     margin-right: auto;
 }
-.selectDificult div{
+
+.selectDificult div {
     display: flex;
     gap: 20px;
-    
+
 }
 
 /* DIFICULT SELECTION */
@@ -122,6 +124,12 @@ header span {
     flex-direction: column-reverse;
     align-items: center;
 }
+.game--towers:hover{
+    cursor: pointer;
+    background-image: url("./images/selected.gif"); 
+    background-size: cover;
+    background-position: center;
+}
 
 .game--towers::after {
     position: absolute;
@@ -139,6 +147,7 @@ header span {
     height: 25px;
     border-radius: 8px;
     z-index: 2;
+    border: 1px solid #0e0d0d6e;
 }
 
 .disk1 {
@@ -205,11 +214,12 @@ header span {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px
 }
-.reset--button,.changeDifficult--button{
-   width: 100px;
-   height:60px;
-   font-family: "Luckiest Guy";
-   font-size: 12px;
+
+.reset--button, .changeDifficult--button {
+    width: 100px;
+    height: 60px;
+    font-family: "Luckiest Guy";
+    font-size: 12px;
 }
 
 .hidden {
@@ -219,7 +229,7 @@ header span {
 .modalVitoria {
     background-image: url("./images/happyMario.gif");
     background-size: contain;
-    background-color:#5394FC;
+    background-color: #5394FC;
     border: 2px solid rgba(0, 0, 0, 0.603);
     font-size: 22px;
     width: 320px;
@@ -239,24 +249,39 @@ header span {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
-.modalVitoria img{
+
+.modalVitoria button {
+    width: 80px;
+    height: 40px;
+}
+
+.modalVitoria img {
     max-width: 50px;
     max-height: 60px;
 }
 
 
 .modalRegras {
-    background-color: #ff000086;
+    background-image: url("./images/sadMario.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: #5394FC;
+    border: 2px solid rgba(0, 0, 0, 0.603);
     width: 320px;
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
     height: 200px;
     top: 30%;
+    font-size: 18px;
+    padding-left: 25px;
+    color: #fff;
     z-index: 3;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: flex-end;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
@@ -270,7 +295,8 @@ header span {
     header {
         background-size: contain;
     }
-    .game--ground{
+
+    .game--ground {
         width: 80%;
     }
 }
@@ -278,6 +304,11 @@ header span {
 @media screen and (min-width:950px) {
     body {
         background-size: contain;
+    }
+
+    button {
+        width: 160px;
+        height: 80px;
     }
 
     .container {
@@ -291,36 +322,46 @@ header span {
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: black;
     }
-    .game{
+
+    .game {
         width: 600px;
     }
-    .game--towers{
+
+    .game--towers {
         width: 30px;
     }
+
     .game--towers::after {
         width: 40px;
     }
-    .game--bottom{
-        width:700px;
+
+    .game--bottom {
+        width: 700px;
     }
-    .game--grass{
+
+    .game--grass {
         width: 750px;
         font-size: 22px;
-        padding-top:10px;
+        padding-top: 10px;
     }
-    .disk1{
+
+    .disk1 {
         width: 60px;
     }
-    .disk2{
+
+    .disk2 {
         width: 100px;
     }
-    .disk3{
+
+    .disk3 {
         width: 140px
     }
-    .disk4{
+
+    .disk4 {
         width: 180px;
     }
-    .disk5{
+
+    .disk5 {
         width: 220px;
     }
 }
