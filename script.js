@@ -31,7 +31,6 @@ function createGame(diskNumber = 3) {
         tower.addEventListener("click",getDisk)
         towersArray.push(tower)
         game.appendChild(tower)
-        main.style.height = "70.5vh"
     }
     for(let i = 0; i <3;i++){
         const div = document.createElement("div")
@@ -120,5 +119,4 @@ function reset(){
 function changeOtherDifficult(){
     main.innerHTML = ""
     selectDificultPop.classList.remove("displayNone")
-    main.style.height = "0px"
 }
