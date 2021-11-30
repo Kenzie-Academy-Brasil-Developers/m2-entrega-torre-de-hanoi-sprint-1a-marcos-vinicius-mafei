@@ -39,7 +39,7 @@ function createGame(diskNumber = 3) {
             div.classList.add("game--bottom")
         }else if(i === 1){
             div.classList.add("game--grass")
-            div.innerText = "total movements: 0"
+            div.innerText = "total de movimentos: 0"
         }else{
             div.classList.add("game--ground")
             const buttonReset = document.createElement("button")
