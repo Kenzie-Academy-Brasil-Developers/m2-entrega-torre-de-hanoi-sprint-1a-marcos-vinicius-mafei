@@ -21,6 +21,10 @@ main {
     align-items: center;
 }
 
+.displayNone{
+    display: none !important;
+}
+
 /* GERAL */
 
 /* HEADER */
@@ -29,7 +33,7 @@ header {
     flex-direction: column;
     align-items: center;
     height: 80px;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
     background-image: url("./images/marioBackground.jpg");
     background-size: cover;
 }
@@ -43,7 +47,9 @@ header h1 {
 }
 header span {
     font-size: 12px;
-    color: var(--green--grass)
+    color: var(--green--grass);
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: black;
 }
 
 .container {
@@ -69,15 +75,26 @@ header span {
 }
 
 .game--towers {
-    background-color: var(--gameColor);
+    background-color: #2C8D33;
     height: 120px;
     width: 15px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    /* border-top-left-radius: 20px;
+    border-top-right-radius: 20px; */
     position: relative;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+}
+.game--towers::after{
+    position: absolute;
+    top: 0;
+    text-align: center;
+    content: "";
+    height:12px;
+    width:20px;
+    background-color: #2C8D33;
+    border-radius: 2px;
+    border: 1px solid #0e0d0d2c;
 }
 
 .disks {
@@ -87,7 +104,7 @@ header span {
 }
 
 .disk1 {
-    background-color: #3d7012;
+    background-color: #2adddd;
     width: 30px;
 }
 
@@ -116,30 +133,35 @@ header span {
 /* GAME DECOR */
 
 .game--bottom {
-    background-color: var(--gameColor);
+    background-color: var(--green--grass);
     height: 20px;
     border-radius: 8px;
     width: 300px;
 }
 
 .game--grass {
-    background-color: var(--green--grass);
+    background-image: url("./images/marioFloor.png");
+    background-size: contain;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 40px;
     width: 320px;
+    color: green;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
 .hidden{
     display: none;
 }
 .modalVitoria{
     background-color: rgba(23, 102, 134, 0.856);
+    font-size: 22px;
     width: 100%;
     position: absolute;
     height: 200px;    
-    top: 30px;
+    top: 100px;
     z-index: 3;
     display: flex;
     align-items: center;
@@ -149,6 +171,11 @@ header span {
     position: absolute;
     z-index: 3;
     color: white;
+    top: 50px;
+}
+.modalVitoria button{
+    background-color: #2adddd;
+    color: #005A00;
 }
 
 .modalRegras{
@@ -156,7 +183,7 @@ header span {
     width: 100%;
     position: absolute;
     height: 200px;    
-    top: 30px;
+    top: 100px;
     z-index: 3;
     display: flex;
     justify-content: center;    
